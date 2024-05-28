@@ -1,0 +1,47 @@
+body{
+    background-color: navy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gra-circles{
+    width: 100vh;
+    height: 100%;
+    position: absolute;
+}
+
+.c1{
+    background: linear-gradient(90deg, #0000ff, #00ff00);
+    height: 300px;
+    width: 300px;
+    position: relative;
+    left: 0%;
+    top: 15%;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.c2{
+    background: linear-gradient(90deg, #0000ff, #00ff00);
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 65%;
+    top: 45%;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.main-card{
+    height: 350px;
+    width: 600px;
+    border: 1px transparent;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.29);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(20px);
+    
+}
