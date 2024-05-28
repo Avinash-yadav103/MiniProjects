@@ -4,8 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="hello.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #f1f1f1;
+            font-family: sans-serif;
+        }
+        .card{
+            width: 350px;
+            height: 400px;
+            background-color: white;
+            border-radius: 20px;
+        }
+        .top{
+            width: 100%;
+            height: 150px;
+            background-color: #3F72EC;
+            border-radius: 20px 20px 0 0;
+        }
+        .mid{
+            display: flex;
+            position: absolute;
+            border: 3px solid #3F72EC;
+            border-radius: 50%;
+            left: 47%;
+            top: 31%;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            /* z-index: 2; */
+        }
+        .midmid{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+        img{
+            width: 100%;
+            border-radius: 50%;
+            height: 100%;
+            /* z-index: 0; */
+            
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: top;
+            height: 250px;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="card">
+        <div class="top">
+
+        </div>
+        <div class="mid"><div class="midmid"><img src="img/360_F_125821215_yoIIsTPyiXFdnH9DA2GOeId3fv4b8FNw.jpg " alt=""></div></div>
+        <div class="bottom">
+            <div class="h1">
+                Avinash Yadav
+            </div>
+            <div class="h2">
+                Frontend Developer & Student
+            </div>
+            <div class="social">
+                <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="twitter"><i class="fa-brands fa-twitter"></i></div>
+                <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                <div class="youtube"><i class="fa-brands fa-youtube"></i></div>
+            </div>
+            <div class="button">
+                <div class="subscribe">
+                    Subscribe
+                </div>
+                <div class="message">
+                    Message
+                </div>
+            </div>
+            <div class="gain">
+                <div class="likes">
+                    <i class="fa-regular fa-heart"></i> 10
+                </div>
+                <div class="comment">
+                    <i class="fa-regular fa-comment"></i> 6
+                </div>
+                <div class="share">
+                    <i class="fa-regular fa-share-from-square"></i> 2
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
