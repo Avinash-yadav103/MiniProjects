@@ -6,16 +6,13 @@ body{
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
+    perspective: 1000px;
 }
 
 .active{
     transform: rotateY(180deg);
 }
 
-.front .back{
-    position: relative;
-    visibility: hidden;
-}
 
 .gra-circles{
     width: 100vh;
@@ -45,19 +42,60 @@ body{
     border-radius: 50%;
 }
 
-#main-card{
+.flip-container {
+    perspective: 1000px;
+}
+
+.flipper {
+    position: relative;
+    width: 550px;
+    height: 400px;
     transform-style: preserve-3d;
     transition: transform 0.6s;
-    padding: 5px;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    /* background-color: #f0f0f0; */
+    background-color: rgba(255, 255, 255, 0.29);
+box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
+backdrop-filter: blur(20px);
+border: 1 px solid rgba(255, 255, 255, 0.18);
+padding: 5px;
+height: 350px;
+width: 600px;
+border: 1px transparent;
+border-radius: 45px;
+}
+
+.back {
+    background-color: #b0c4de;
+    transform: rotateY(180deg);
+}
+
+#main-card{
+    /* padding: 5px;
     height: 350px;
     width: 600px;
     border: 1px transparent;
-    border-radius: 45px;
-    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 45px; */
+    /* background-color: rgba(255, 255, 255, 0.29);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
     backdrop-filter: blur(20px);
-    border: 1 px solid rgba(255, 255, 255, 0.18);
+    border: 1 px solid rgba(255, 255, 255, 0.18); */
 }
+
+
 
 .top{
     display: flex;
@@ -86,6 +124,14 @@ body{
     width: 90%;
     /* background-color: green; */
     padding: 20px 35px 20px 35px;
+}
+
+button{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    border: none;
 }
 
 .name{

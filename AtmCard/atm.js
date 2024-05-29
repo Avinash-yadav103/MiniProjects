@@ -7,6 +7,6 @@
 // }
 
 function flipDiv() {
-    var flipper = document.getElementById('main-card');
-    flipper.classList.toggle('active');
+    var flipper = document.getElementById('flipper');
+    flipper.classList.toggle('flipped');
 }
