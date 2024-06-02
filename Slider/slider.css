@@ -7,12 +7,9 @@
 body{
     width: 100vw;
     height: 100vh;
-    position: fixed;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+
+    /* min-height: 100vh; */
     background-image: url('https://wallpapers.com/images/hd/pc-gaming-setup-rgb-4k-ft1ym37yjyb7lp19.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,8 +19,6 @@ body{
 }
 
 .slider{
-    position: absolute;
-    left: 0;
     width: 20%;
     height: 100vh;
     /* display: flex; */
@@ -35,9 +30,58 @@ body{
     
 }
 
-.sec{
+.slider p{
+    padding: 0 80px 0 20px;
+}
+
+.top-sec{
     width: 100%;
-    background-color: #fff;
-    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 25px 0px 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+hr{
+    margin-top: 15px;
+    opacity: 0.7;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
+}
+
+.down-sec{
+    width: 100%;
+    padding: 20px 25px 25px 10px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* position: relative; */
+    padding: 30px 40px 30px 20px;
+    font-size: 1.5rem;
+    width: 100%;
+    /* background-color: green; */
+    height: 7vh;
+
+}
+
+.sec:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border: 2px solid rgba(229, 226, 226, 0.29);
+    
+}
+
+.define{
+    padding: 5px 5px 5px 10px;   
 }
 
