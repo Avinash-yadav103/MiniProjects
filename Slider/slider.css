@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://wallpapers.com/images/hd/pc-gaming-setup-rgb-4k-ft1ym37yjyb7lp19.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white ;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider{
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    /* display: flex; */
+    /* background-color: #015F91,0.3; */
+    background-color: rgba(red, green, blue, 0.3);
+    opacity: 0.95;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(20px);
+    
+}
+
+.sec{
+    width: 100%;
+    background-color: #fff;
+    height: 2vh;
+}
+
