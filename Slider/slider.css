@@ -18,6 +18,13 @@ body{
     align-items: center;
 }
 
+.open{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 1.8rem;
+}
+
 .slider{
     width: 20%;
     height: 100vh;
@@ -27,7 +34,7 @@ body{
     opacity: 0.95;
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
     backdrop-filter: blur(20px);
-    
+    transition: all 0.5s ease-in-out;
 }
 
 .slider p{
@@ -85,3 +92,17 @@ hr{
     padding: 5px 5px 5px 10px;   
 }
 
+.slider--on{
+    width: 20%;
+    height: 100vh;
+    /* display: flex; */
+    /* background-color: #015F91,0.3; */
+    background-color: rgba(red, green, blue, 0.3);
+    opacity: 0.95;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(20px);
+    transition: all 300ms ease-in-out;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+}
