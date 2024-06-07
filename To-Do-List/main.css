@@ -58,7 +58,7 @@ input::placeholder {
 } */
   
 .btnadd{
-    
+
 }
 
 input[type="text"]{
@@ -124,10 +124,12 @@ li{
     display: flex;
 } 
 
-.liaf img{
-    width: 4vh;
-    height: 4vh;
-    padding: 2px 5px 0 0;
+ul li::before{
+    content: '';
+    background-image: url('https://png.pngtree.com/png-clipart/20200801/ourmid/pngtree-black-ring-png-image_2319165.png');
+    width: 28px;
+    height: 28px;
+    position: absolute;
 }
 
 li i{

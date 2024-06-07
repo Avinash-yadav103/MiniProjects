@@ -1,5 +1,5 @@
 let input = document.getElementById('input');
-let ul = document.getElementById('list');
+let ul = document.getElementById('list-container');
 
 function addTask(){
     if(input.value === ''){
@@ -8,6 +8,7 @@ function addTask(){
     else{
         let li = document.createElement('li');
         li.innerHTML = input.value;
-        list.appendChild(li);
+        ul.appendChild(li);
+        input.value = '';
     }
 }
