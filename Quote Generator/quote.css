@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    /* font-family: 'Roboto', sans-serif; */
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 45vw;
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hr{
+    width: 20%;
+}
+
+.quote{
+    width: 80%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quotename{
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.content{
+    display: flex;
+    /* flex-direction: column; */
+
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+.author{
+    width: 95%;
+    padding: 6px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn{
+    width: 20%;
+    padding: 10px;
+    background-color: #299fe3;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: 10px;
+}
