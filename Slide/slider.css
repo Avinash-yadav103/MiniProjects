@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    
+}
+
+#img-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+#img-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.left{
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: violet; */
+    padding: 25vh 10vh 25vh 10vh;
+}
+
+.content{
+    color: white;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+
+
+.right{
+    width: 55%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f1f1f1; */
+    padding: 20vh 0 25vh 0;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+}
+
+.slides{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider img{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 20px;
+    /* transition: 0.5s ease-in-out ; */
+
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid violet;
+    /* border-radius: 5px; */
+}
+
+#next img{
+    width: 50px;
+}
+#next{
+    /* position: absolute; */
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
