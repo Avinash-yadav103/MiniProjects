@@ -4,8 +4,8 @@ let slides = document.getElementById('slides');
 
 let imgbg = document.getElementById('img-bg');
 
-// console.log(slides.firstElementChild);
-// console.log(slides.lastElementChild);
+console.log(slides.firstElementChild);
+console.log(slides.lastElementChild);
 console.log(imgbg.firstElementChild);
 
 next.addEventListener('click', function() {
