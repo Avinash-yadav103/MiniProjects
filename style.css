@@ -188,3 +188,20 @@ form {
     box-shadow: inset 10px 10px 20px #0a0b0a, inset -10px -10px 20px #141514;
     background: #0F100F;
 }
+
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #0F100F;
+    color: #E0E0E0;
+    font-size: 16px;
+    box-shadow: 10px 10px 20px #0a0b0a, -10px -10px 20px #141514;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #00bcd4;
+}
