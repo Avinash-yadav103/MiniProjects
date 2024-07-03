@@ -41,4 +41,3 @@ This file contains the CSS styles for the `index.html` file.
 1. Clone the repository:
    ```sh
    git clone https://github.com/your-username/your-repo-name.git
-```
