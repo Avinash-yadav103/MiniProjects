@@ -1,6 +1,3 @@
-# Create the README.md file with the provided content
-
-readme_content = """
 # Mini Projects
 
 This repository contains a collection of mini projects. Each project is accessible via links on the main `index.html` file and styled using the `style.css` file.
@@ -8,7 +5,7 @@ This repository contains a collection of mini projects. Each project is accessib
 ## Projects
 
 ### 1. AtmCard
-A simulation of an ATM card system.
+A simulation of an ATM card with 3D effect.
 
 ### 2. MusicPlayer
 A simple music player application.
