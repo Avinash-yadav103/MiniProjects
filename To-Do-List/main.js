@@ -10,5 +10,17 @@ function addTask(){
         li.innerHTML = input.value;
         ul.appendChild(li);
         input.value = '';
+
+        let removeButton = document.createElement('i');
+        removeButton.classList.add('fa-solid', 'fa-x');
+        // removeButton.innerHTML = 'Remove';
+        li.appendChild(removeButton);
+        removeButton.onclick = function(){
+            ul.removeChild(li);
+        }
     }
 }
+
+// function removeTask(){
+//     ul.removeChild();
+// }

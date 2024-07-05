@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
 
 body{
@@ -114,12 +115,13 @@ ul{
     justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+    padding-left: 80px;
 }
 
 li{
     /* list-style: url(https://png.pngtree.com/png-clipart/20200801/ourmid/pngtree-black-ring-png-image_2319165.png); */
     size: 2vh;
-    width: 100%;
+    width: 80%;
     padding: 1vh;
     display: flex;
 } 
@@ -148,4 +150,5 @@ li i{
     display: flex;
     align-items: center;
     justify-self: flex-start;
+    width: 100%;
 }
