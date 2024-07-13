@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7; /* Adjust the opacity value as needed */
+    z-index: -1; /* Place the pseudo-element behind the content */
+    filter: contrast(200%); /* Add contrast to the background image */
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    width: 400px;
+    height: 560px;
+    background-color: #DA3040;
+    border-radius: 30px;
+    position: relative;
+    left: 100px;
+}
+
+.stbox{
+    /* background-color: black; */
+    height: 400px;
+    width: 200px;
+    opacity: 0.3;
+}
+
+.starwarimg{
+    transform: rotate(-90deg);
+    position: relative;
+    top: 107px;
+    left: -105px;
+    padding: 0;
+    /* -webkit-background-clip: image; */
+    -webkit-text-fill-color: transparent;
+}
+
+
+.mainimg{
+    position: relative;
+    z-index: 4;
+    top: -300px;
+    
+}
+
+.mainimg img{
+    width: 500px;
+}
+
+.rightright{
+    position: relative;
+    background-image: url('thor.jpg');
+    border-radius: 35px;
+    opacity: 0.9;
+    right: 100px;
+    width: 790px;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right{
+    position: relative;
+    z-index: 2;
+    /* right: 100px; */
+    width: 790px;
+    height: 470px;
+    background-color: rgba(0, 0, 0, 0.563);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    /* background-image: url('bg.jpg'); */
+
+}
+
+
+.rightcontent{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    color: white;
+    padding: 0 0 0 30%;
+}
