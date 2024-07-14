@@ -111,3 +111,56 @@ body::before {
     color: white;
     padding: 0 0 0 30%;
 }
+
+.right_top{
+    padding: 10px 0 50px 0;
+}
+
+.right_bottom{
+    display: flex;
+    width: 400px;
+    height: 200px;
+    /* background-color: #fff; */
+    padding: 20px 0 10px 0;
+}
+
+.size{
+    display: flex;
+    flex-direction: column;
+}
+
+.sizes{
+    display: flex;
+    padding: 10px 0 10px;
+}
+
+.radios{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DA3040;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}
+
+.vertical{
+    width: 1px;
+    height: 150px;
+    background-color: grey;
+    margin: 0 0 0 60px;
+}
+/* 
+.addcart{
+    background-color: red;
+} */
+
+.addcart button{
+    border: 1px transparent;
+    border-radius: 30px;
+    padding: 12px 25px 12px 25px;
+    color: white;
+    background-color: #DA3040;
+}
