@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    grid-column: 1 / -1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    color: #4a5568;
+    text-decoration: none;
+}
+
+.nav-item.active {
+    background-color: #4338ca;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Event Details */
+.event-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.event-card {
+    padding: 1rem;
+    border-radius: 1rem;
+    min-height: 100px;
+}
+
+.event-card.when { background-color: #ffe4e6; }
+.event-card.from { background-color: #fef3c7; }
+.event-card.where { background-color: #dcfce7; }
+.event-card.why { background-color: #f3e8ff; }
+
+/* Team Section */
+.team-section {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* Analytics */
+.analytics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.chart {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Agenda */
+.agenda {
+    margin-top: 2rem;
+}
+
+.agenda-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #4338ca;
+    border-radius: 4px;
+}
+
+/* QR Codes */
+.qr-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.qr-code {
+    text-align: center;
+    padding: 1rem;
+}
+
+.qr-code img {
+    width: 120px;
+    height: 120px;
+}
+
+/* Get Updates Section */
+.get-updates {
+    background-color: #4338ca;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.get-updates button {
+    background-color: white;
+    color: #4338ca;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
