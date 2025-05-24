@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+  <title>My Component Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
+    <div class="theme-controls">
+      <div class="theme-toggle" aria-label="Toggle dark mode"></div>
+      <div class="color-options">
+        <div class="color-option active" data-theme="blue" style="background-color: #3b82f6;"></div>
+        <div class="color-option" data-theme="purple" style="background-color: #8b5cf6;"></div>
+        <div class="color-option" data-theme="green" style="background-color: #10b981;"></div>
+        <div class="color-option" data-theme="orange" style="background-color: #f59e0b;"></div>
+        <div class="color-option" data-theme="red" style="background-color: #ef4444;"></div>
+      </div>
+    </div>
     <ul>
       <li><a href="#about-me">About Me</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -19,77 +28,167 @@
   </nav>
 
   <section id="projects" class="section">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="img/Screenshot 2024-06-13 185432.png" alt="">
-        <h3>Animated Card</h3>
-        <p>This UI card is made by me which flips on clicking. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="AtmCard/atm.html" class="project-link">View Project</a>
+    <div class="container">
+      <h2>My Component Library</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="img/Screenshot 2024-06-13 185432.png" alt="Animated Card">
+          <div class="project-card-content">
+            <h3>Animated Card</h3>
+            <p>This UI card is made by me which flips on clicking. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="AtmCard/atm.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="img/Screenshot 2024-06-13 185455.png" alt="Info-Card">
+          <div class="project-card-content">
+            <h3>Info-Card</h3>
+            <p>This is a basic info-card. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="card/card.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="img/Screenshot 2024-06-13 185522.png" alt="Quiz">
+          <div class="project-card-content">
+            <h3>Quiz</h3>
+            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="Quiz/quiz.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="img/Screenshot 2024-06-13 185544.png" alt="Quote Generator">
+          <div class="project-card-content">
+            <h3>Quote Generator</h3>
+            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="Quote Generator/quote.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="img/Screenshot 2024-06-13 185615.png" alt="Sidebar">
+          <div class="project-card-content">
+            <h3>Sidebar</h3>
+            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="Sidebar/sidebar.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="img/Screenshot 2024-06-13 185642.png" alt="Slider">
+          <div class="project-card-content">
+            <h3>Slider</h3>
+            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="Slide/slider.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="img/TODO.png" alt="Todo List">
+          <div class="project-card-content">
+            <h3>Todo List</h3>
+            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="To-Do-List/index.html" class="project-link">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="/images/DropoutFreeIndia.png" alt="Quiz Project">
+          <div class="project-card-content">
+            <h3>Quiz App</h3>
+            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
+            <a href="Quiz/quiz.html" class="project-link">View Project</a>
+          </div>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="img/Screenshot 2024-06-13 185455.png" alt="">
-        <h3>Info-Card</h3>
-        <p>This is a basic info-card. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="card/card.html" class="project-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="img/Screenshot 2024-06-13 185522.png" alt=""  >
-        <h3>Quiz</h3>
-        <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="Quiz/quiz.html" class="project-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="img/Screenshot 2024-06-13 185544.png" alt=""  >
-        <h3>Quote Generator</h3>
-        <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="Quote Generator/quote.html" class="project-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="img/Screenshot 2024-06-13 185615.png" alt=""  >
-        <h3>Sidebar</h3>
-        <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="Sidebar/sidebar.html" class="project-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="img/Screenshot 2024-06-13 185642.png" alt=""  >
-        <h3>Slider</h3>
-        <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="Slide/slider.html" class="project-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="img/TODO.png" alt=""  >
-        <h3>Project 3</h3>
-        <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="To-Do-List/index.html" class="project-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="/images/DropoutFreeIndia.png" alt=""  >
-        <h3>Project 3</h3>
-        <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-        <a href="Quiz/quiz.html" class="project-link">View Project</a>
-      </div>
-      <!-- Add more project cards as needed -->
     </div>
   </section>
 
   <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
+
+  <script>
+    // Theme toggling functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeToggle = document.querySelector('.theme-toggle');
+      const html = document.documentElement;
+      
+      // Check for saved theme preference or use preferred color scheme
+      const savedTheme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      // Apply saved theme
+      html.setAttribute('data-theme', savedTheme);
+      if (savedTheme === 'dark') {
+        themeToggle.setAttribute('data-active', 'dark');
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        html.setAttribute('data-theme', newTheme);
+        themeToggle.setAttribute('data-active', newTheme === 'dark' ? 'dark' : 'light');
+        
+        // Save preference
+        localStorage.setItem('theme', newTheme);
+      });
+      
+      // Color theme options
+      const colorOptions = document.querySelectorAll('.color-option');
+      
+      // Check for saved color theme
+      const savedColorTheme = localStorage.getItem('colorTheme');
+      if (savedColorTheme) {
+        html.classList.add(`theme-${savedColorTheme}`);
+        colorOptions.forEach(option => {
+          if (option.dataset.theme === savedColorTheme) {
+            option.classList.add('active');
+          } else {
+            option.classList.remove('active');
+          }
+        });
+      }
+      
+      colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+          // Remove all theme classes
+          html.className = '';
+          
+          // Add selected theme
+          const selectedTheme = option.dataset.theme;
+          html.classList.add(`theme-${selectedTheme}`);
+          
+          // Update active state
+          colorOptions.forEach(opt => opt.classList.remove('active'));
+          option.classList.add('active');
+          
+          // Save preference
+          localStorage.setItem('colorTheme', selectedTheme);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
