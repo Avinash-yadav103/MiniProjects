@@ -248,7 +248,7 @@
       const savedBaseTheme = localStorage.getItem('baseTheme') || 'zinc';
       const savedAccentTheme = localStorage.getItem('accentTheme') || 'blue';
 
-      // Apply saved theme
+      // Apply saved theme (dark/light)
       html.setAttribute('data-theme', savedTheme);
       if (savedTheme === 'dark') {
         themeToggle.setAttribute('data-active', 'dark');
@@ -293,8 +293,13 @@
       const currentTheme = html.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       
+      // Update data-theme attribute
       html.setAttribute('data-theme', newTheme);
+      
+      // Update toggle button state
       themeToggle.setAttribute('data-active', newTheme === 'dark' ? 'dark' : '');
+      
+      // Save the preference
       localStorage.setItem('theme', newTheme);
     });
 
@@ -314,13 +319,20 @@
     // Apply theme when option is clicked
     themeOptions.forEach(option => {
       option.addEventListener('click', () => {
-        const baseTheme = option.dataset.theme || localStorage.getItem('baseTheme') || 'zinc';
-        const accentTheme = option.dataset.accent || localStorage.getItem('accentTheme') || 'blue';
+        // Get current theme mode
+        const currentMode = html.getAttribute('data-theme');
+        
+        // Get base and accent themes
+        let baseTheme = localStorage.getItem('baseTheme') || 'zinc';
+        let accentTheme = localStorage.getItem('accentTheme') || 'blue';
 
+        // Update based on what was clicked
         if (option.dataset.theme) {
+          baseTheme = option.dataset.theme;
           localStorage.setItem('baseTheme', baseTheme);
         }
         if (option.dataset.accent) {
+          accentTheme = option.dataset.accent;
           localStorage.setItem('accentTheme', accentTheme);
         }
 

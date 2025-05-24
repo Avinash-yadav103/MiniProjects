@@ -758,3 +758,119 @@ h2 {
     padding: 1.5rem;
   }
 }
+
+/* Dark mode overrides */
+[data-theme="dark"] .theme-toggle {
+  background-color: var(--muted);
+}
+
+[data-theme="dark"] .theme-toggle::after {
+  background-color: var(--background);
+}
+
+[data-theme="dark"] .theme-selector-button {
+  background-color: var(--secondary);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+/* Ensure dark theme always has priority */
+[data-theme="dark"] {
+  --background: #020617;
+  --foreground: #f8fafc;
+  
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  
+  --popover: #020617;
+  --popover-foreground: #f8fafc;
+  
+  --card: #020617;
+  --card-foreground: #f8fafc;
+  
+  --border: #1e293b;
+  --input: #1e293b;
+  
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  
+  --destructive: #7f1d1d;
+  --destructive-foreground: #f8fafc;
+  
+  --ring: #94a3b8;
+  
+  --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+}
+
+/* Dark variants of theme colors */
+[data-theme="dark"].theme-zinc {
+  --primary: #a1a1aa;
+  --primary-foreground: #18181b;
+}
+
+[data-theme="dark"].theme-slate {
+  --primary: #94a3b8;
+  --primary-foreground: #0f172a;
+}
+
+[data-theme="dark"].theme-stone {
+  --primary: #a8a29e;
+  --primary-foreground: #1c1917;
+}
+
+[data-theme="dark"].theme-gray {
+  --primary: #9ca3af;
+  --primary-foreground: #111827;
+}
+
+[data-theme="dark"].theme-neutral {
+  --primary: #a3a3a3;
+  --primary-foreground: #171717;
+}
+
+/* Dark mode accent overrides */
+[data-theme="dark"].accent-blue {
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --ring: #3b82f6;
+}
+
+[data-theme="dark"].accent-violet {
+  --primary: #a78bfa;
+  --primary-foreground: #ffffff;
+  --ring: #a78bfa;
+}
+
+[data-theme="dark"].accent-green {
+  --primary: #34d399;
+  --primary-foreground: #ffffff;
+  --ring: #34d399;
+}
+
+[data-theme="dark"].accent-yellow {
+  --primary: #fbbf24;
+  --primary-foreground: #ffffff;
+  --ring: #fbbf24;
+}
+
+[data-theme="dark"].accent-orange {
+  --primary: #fb923c;
+  --primary-foreground: #ffffff;
+  --ring: #fb923c;
+}
+
+[data-theme="dark"].accent-red {
+  --primary: #f87171;
+  --primary-foreground: #ffffff;
+  --ring: #f87171;
+}
+
+[data-theme="dark"].accent-pink {
+  --primary: #f472b6;
+  --primary-foreground: #ffffff;
+  --ring: #f472b6;
+}
