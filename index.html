@@ -3,192 +3,335 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Component Library</title>
-  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Component UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="theme-controls">
-      <div class="theme-toggle" aria-label="Toggle dark mode"></div>
-      <div class="color-options">
-        <div class="color-option active" data-theme="blue" style="background-color: #3b82f6;"></div>
-        <div class="color-option" data-theme="purple" style="background-color: #8b5cf6;"></div>
-        <div class="color-option" data-theme="green" style="background-color: #10b981;"></div>
-        <div class="color-option" data-theme="orange" style="background-color: #f59e0b;"></div>
-        <div class="color-option" data-theme="red" style="background-color: #ef4444;"></div>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="/" class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L17 7H7L12 2Z" fill="currentColor" />
+            <path d="M12 22L7 17H17L12 22Z" fill="currentColor" />
+            <path d="M2 12L7 7V17L2 12Z" fill="currentColor" />
+            <path d="M22 12L17 17V7L22 12Z" fill="currentColor" />
+          </svg>
+          <span>component/ui</span>
+        </a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#docs">Docs</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#blocks">Blocks</a></li>
+            <li><a href="#charts">Charts</a></li>
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#colors">Colors</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="search">
+          <input type="text" placeholder="Search documentation..." />
+          <kbd>⌘ K</kbd>
+        </div>
+        <a href="https://github.com/" class="icon-button" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.84 21.49C9.34 21.582 9.52 21.27 9.52 21.008C9.52 20.77 9.512 20.057 9.508 19.192C6.726 19.8 6.14 17.782 6.14 17.782C5.684 16.642 5.028 16.332 5.028 16.332C4.132 15.728 5.098 15.74 5.098 15.74C6.102 15.81 6.636 16.758 6.636 16.758C7.536 18.268 8.932 17.83 9.54 17.576C9.63 16.944 9.89 16.508 10.176 16.258C7.954 16.006 5.62 15.188 5.62 11.326C5.62 10.228 6.01 9.326 6.656 8.624C6.554 8.374 6.212 7.484 6.756 6.218C6.756 6.218 7.606 5.956 9.496 7.208C10.296 7.2 11.06 7.096 11.86 7.094C12.66 7.096 13.426 7.2 14.226 7.208C16.116 5.956 16.964 6.218 16.964 6.218C17.508 7.484 17.168 8.374 17.064 8.624C17.712 9.326 18.1 10.228 18.1 11.326C18.1 15.198 15.762 16 13.534 16.248C13.894 16.554 14.214 17.164 14.214 18.084C14.214 19.394 14.202 20.684 14.202 21.008C14.202 21.272 14.38 21.586 14.888 21.486C18.858 20.162 21.72 16.416 21.72 12C21.72 6.477 17.242 2 11.72 2H12Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <div class="theme-toggle" aria-label="Toggle dark mode"></div>
+        <div class="theme-selector">
+          <button class="theme-selector-button">
+            <span>Theme</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="theme-selector-dropdown">
+            <div class="dropdown-section">
+              <p class="dropdown-label">Base</p>
+              <div class="theme-selector-option" data-theme="zinc">
+                <div class="theme-selector-option-color" style="background-color: #18181b"></div>
+                <span>Zinc (Default)</span>
+              </div>
+              <div class="theme-selector-option" data-theme="slate">
+                <div class="theme-selector-option-color" style="background-color: #0f172a"></div>
+                <span>Slate</span>
+              </div>
+              <div class="theme-selector-option" data-theme="stone">
+                <div class="theme-selector-option-color" style="background-color: #1c1917"></div>
+                <span>Stone</span>
+              </div>
+              <div class="theme-selector-option" data-theme="gray">
+                <div class="theme-selector-option-color" style="background-color: #111827"></div>
+                <span>Gray</span>
+              </div>
+              <div class="theme-selector-option" data-theme="neutral">
+                <div class="theme-selector-option-color" style="background-color: #171717"></div>
+                <span>Neutral</span>
+              </div>
+            </div>
+            <div class="dropdown-section">
+              <p class="dropdown-label">Accent</p>
+              <div class="theme-selector-option" data-accent="blue">
+                <div class="theme-selector-option-color" style="background-color: #2563eb"></div>
+                <span>Blue</span>
+              </div>
+              <div class="theme-selector-option" data-accent="violet">
+                <div class="theme-selector-option-color" style="background-color: #8b5cf6"></div>
+                <span>Violet</span>
+              </div>
+              <div class="theme-selector-option" data-accent="green">
+                <div class="theme-selector-option-color" style="background-color: #10b981"></div>
+                <span>Green</span>
+              </div>
+              <div class="theme-selector-option" data-accent="yellow">
+                <div class="theme-selector-option-color" style="background-color: #eab308"></div>
+                <span>Yellow</span>
+              </div>
+              <div class="theme-selector-option" data-accent="orange">
+                <div class="theme-selector-option-color" style="background-color: #f97316"></div>
+                <span>Orange</span>
+              </div>
+              <div class="theme-selector-option" data-accent="red">
+                <div class="theme-selector-option-color" style="background-color: #ef4444"></div>
+                <span>Red</span>
+              </div>
+              <div class="theme-selector-option" data-accent="pink">
+                <div class="theme-selector-option-color" style="background-color: #ec4899"></div>
+                <span>Pink</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <ul>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  </header>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>My Component Library</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <img src="img/Screenshot 2024-06-13 185432.png" alt="Animated Card">
-          <div class="project-card-content">
-            <h3>Animated Card</h3>
-            <p>This UI card is made by me which flips on clicking. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="AtmCard/atm.html" class="project-link">View Project</a>
-          </div>
+  <main>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6V18M6 12H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Get Started with Tailwind v4</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        
-        <div class="project-card">
-          <img src="img/Screenshot 2024-06-13 185455.png" alt="Info-Card">
-          <div class="project-card-content">
-            <h3>Info-Card</h3>
-            <p>This is a basic info-card. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="card/card.html" class="project-link">View Project</a>
-          </div>
+        <h1>Build your component library</h1>
+        <p class="hero-subtitle">A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Get Started</a>
+          <a href="#" class="btn btn-secondary">Browse Blocks</a>
         </div>
-        
-        <div class="project-card">
-          <img src="img/Screenshot 2024-06-13 185522.png" alt="Quiz">
-          <div class="project-card-content">
-            <h3>Quiz</h3>
-            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="Quiz/quiz.html" class="project-link">View Project</a>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Component Examples</h2>
+        <div class="projects-container">
+          <div class="project-card">
+            <img src="img/Screenshot 2024-06-13 185432.png" alt="Animated Card">
+            <div class="project-card-content">
+              <h3>Animated Card</h3>
+              <p>Interactive card that flips on clicking. Built with HTML, CSS, and JavaScript.</p>
+              <a href="AtmCard/atm.html" class="project-link">View Component</a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card">
-          <img src="img/Screenshot 2024-06-13 185544.png" alt="Quote Generator">
-          <div class="project-card-content">
-            <h3>Quote Generator</h3>
-            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="Quote Generator/quote.html" class="project-link">View Project</a>
+          
+          <div class="project-card">
+            <img src="img/Screenshot 2024-06-13 185455.png" alt="Info-Card">
+            <div class="project-card-content">
+              <h3>Info Card</h3>
+              <p>Clean information display card with minimal design for better readability.</p>
+              <a href="card/card.html" class="project-link">View Component</a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card">
-          <img src="img/Screenshot 2024-06-13 185615.png" alt="Sidebar">
-          <div class="project-card-content">
-            <h3>Sidebar</h3>
-            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="Sidebar/sidebar.html" class="project-link">View Project</a>
+          
+          <div class="project-card">
+            <img src="img/Screenshot 2024-06-13 185522.png" alt="Quiz">
+            <div class="project-card-content">
+              <h3>Quiz Component</h3>
+              <p>Interactive quiz interface with progress tracking and score calculation.</p>
+              <a href="Quiz/quiz.html" class="project-link">View Component</a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card">
-          <img src="img/Screenshot 2024-06-13 185642.png" alt="Slider">
-          <div class="project-card-content">
-            <h3>Slider</h3>
-            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="Slide/slider.html" class="project-link">View Project</a>
+          
+          <div class="project-card">
+            <img src="img/Screenshot 2024-06-13 185544.png" alt="Quote Generator">
+            <div class="project-card-content">
+              <h3>Quote Generator</h3>
+              <p>Dynamic quote display with elegant typography and animations.</p>
+              <a href="Quote Generator/quote.html" class="project-link">View Component</a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card">
-          <img src="img/TODO.png" alt="Todo List">
-          <div class="project-card-content">
-            <h3>Todo List</h3>
-            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="To-Do-List/index.html" class="project-link">View Project</a>
+          
+          <div class="project-card">
+            <img src="img/Screenshot 2024-06-13 185615.png" alt="Sidebar">
+            <div class="project-card-content">
+              <h3>Sidebar Navigation</h3>
+              <p>Collapsible sidebar with smooth transitions and nested navigation.</p>
+              <a href="Sidebar/sidebar.html" class="project-link">View Component</a>
+            </div>
           </div>
-        </div>
-        
-        <div class="project-card">
-          <img src="/images/DropoutFreeIndia.png" alt="Quiz Project">
-          <div class="project-card-content">
-            <h3>Quiz App</h3>
-            <p>A brief description of the project. This project showcases my skills in HTML, CSS, and JavaScript.</p>
-            <a href="Quiz/quiz.html" class="project-link">View Project</a>
+          
+          <div class="project-card">
+            <img src="img/Screenshot 2024-06-13 185642.png" alt="Slider">
+            <div class="project-card-content">
+              <h3>Content Slider</h3>
+              <p>Smooth sliding carousel for showcasing multiple content pieces.</p>
+              <a href="Slide/slider.html" class="project-link">View Component</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <img src="img/TODO.png" alt="Todo List">
+            <div class="project-card-content">
+              <h3>Todo List</h3>
+              <p>Feature-rich task management with drag-and-drop sorting.</p>
+              <a href="To-Do-List/index.html" class="project-link">View Component</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section">
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+      <p>© 2025 Component/UI. All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
   <script>
+  document.addEventListener('DOMContentLoaded', () => {
     // Theme toggling functionality
-    document.addEventListener('DOMContentLoaded', () => {
-      // Theme toggle
-      const themeToggle = document.querySelector('.theme-toggle');
-      const html = document.documentElement;
-      
-      // Check for saved theme preference or use preferred color scheme
-      const savedTheme = localStorage.getItem('theme') || 
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      
+    const html = document.documentElement;
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeSelector = document.querySelector('.theme-selector-button');
+    const themeSelectorDropdown = document.querySelector('.theme-selector-dropdown');
+    const themeOptions = document.querySelectorAll('.theme-selector-option');
+
+    // Initialize themes
+    function initThemes() {
+      // Dark/Light mode
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+      const savedBaseTheme = localStorage.getItem('baseTheme') || 'zinc';
+      const savedAccentTheme = localStorage.getItem('accentTheme') || 'blue';
+
       // Apply saved theme
       html.setAttribute('data-theme', savedTheme);
       if (savedTheme === 'dark') {
         themeToggle.setAttribute('data-active', 'dark');
       }
-      
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        html.setAttribute('data-theme', newTheme);
-        themeToggle.setAttribute('data-active', newTheme === 'dark' ? 'dark' : 'light');
-        
-        // Save preference
-        localStorage.setItem('theme', newTheme);
+
+      // Apply saved base and accent themes
+      applyThemes(savedBaseTheme, savedAccentTheme);
+      updateActiveState(savedBaseTheme, savedAccentTheme);
+    }
+
+    function applyThemes(baseTheme, accentTheme) {
+      // Remove any existing theme classes
+      html.className = html.className
+        .split(' ')
+        .filter(c => !c.startsWith('theme-') && !c.startsWith('accent-'))
+        .join(' ');
+
+      // Add the new theme classes
+      if (baseTheme) html.classList.add(`theme-${baseTheme}`);
+      if (accentTheme) html.classList.add(`accent-${accentTheme}`);
+    }
+
+    function updateActiveState(baseTheme, accentTheme) {
+      // Remove active state from all options
+      themeOptions.forEach(option => {
+        option.classList.remove('active');
       });
-      
-      // Color theme options
-      const colorOptions = document.querySelectorAll('.color-option');
-      
-      // Check for saved color theme
-      const savedColorTheme = localStorage.getItem('colorTheme');
-      if (savedColorTheme) {
-        html.classList.add(`theme-${savedColorTheme}`);
-        colorOptions.forEach(option => {
-          if (option.dataset.theme === savedColorTheme) {
-            option.classList.add('active');
-          } else {
-            option.classList.remove('active');
-          }
-        });
-      }
-      
-      colorOptions.forEach(option => {
-        option.addEventListener('click', () => {
-          // Remove all theme classes
-          html.className = '';
-          
-          // Add selected theme
-          const selectedTheme = option.dataset.theme;
-          html.classList.add(`theme-${selectedTheme}`);
-          
-          // Update active state
-          colorOptions.forEach(opt => opt.classList.remove('active'));
+
+      // Set active state for current options
+      themeOptions.forEach(option => {
+        if (option.dataset.theme === baseTheme) {
           option.classList.add('active');
-          
-          // Save preference
-          localStorage.setItem('colorTheme', selectedTheme);
-        });
+        }
+        if (option.dataset.accent === accentTheme) {
+          option.classList.add('active');
+        }
+      });
+    }
+
+    // Toggle dark/light mode
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      themeToggle.setAttribute('data-active', newTheme === 'dark' ? 'dark' : '');
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Theme selector dropdown
+    themeSelector.addEventListener('click', (e) => {
+      e.stopPropagation();
+      themeSelectorDropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!themeSelector.contains(e.target) && !themeSelectorDropdown.contains(e.target)) {
+        themeSelectorDropdown.classList.remove('show');
+      }
+    });
+
+    // Apply theme when option is clicked
+    themeOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const baseTheme = option.dataset.theme || localStorage.getItem('baseTheme') || 'zinc';
+        const accentTheme = option.dataset.accent || localStorage.getItem('accentTheme') || 'blue';
+
+        if (option.dataset.theme) {
+          localStorage.setItem('baseTheme', baseTheme);
+        }
+        if (option.dataset.accent) {
+          localStorage.setItem('accentTheme', accentTheme);
+        }
+
+        applyThemes(baseTheme, accentTheme);
+        updateActiveState(baseTheme, accentTheme);
       });
     });
+
+    // Initialize on page load
+    initThemes();
+  });
   </script>
 </body>
 </html>
