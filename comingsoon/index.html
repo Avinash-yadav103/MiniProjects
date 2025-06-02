@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch - Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+      z-index: -1;
+    }
+
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: blur(2px);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-dot {
+      color: #4A9DFF;
+    }
+
+    .phone {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .phone-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .subscribe-text {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 1.5rem;
+      margin: 4rem 0;
+    }
+
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .countdown-value {
+      font-size: 4rem;
+      font-weight: 300;
+      position: relative;
+      padding: 0 1rem;
+    }
+
+    .countdown-separator {
+      font-size: 4rem;
+      font-weight: 300;
+      opacity: 0.7;
+      align-self: flex-start;
+    }
+
+    .countdown-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+
+    .subscription-form {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .subscription-input {
+      flex: 1;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: background-color 0.3s;
+    }
+
+    .subscription-input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .subscription-input:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .subscription-button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #4A9DFF;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .subscription-button:hover {
+      background-color: #3a8de0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .description, .subscribe-text {
+        font-size: 1rem;
+      }
+
+      .countdown {
+        gap: 1rem;
+      }
+
+      .countdown-value {
+        font-size: 3rem;
+      }
+
+      .countdown-separator {
+        font-size: 3rem;
+      }
+
+      .countdown-label {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1.5rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .phone {
+        font-size: 0.8rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .countdown {
+        gap: 0.5rem;
+      }
+
+      .countdown-value {
+        font-size: 2.5rem;
+      }
+
+      .countdown-separator {
+        font-size: 2.5rem;
+      }
+
+      .subscription-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://source.unsplash.com/random/1920x1080/?office,team,work" alt="Background" class="bg-image">
+  <div class="bg-overlay"></div>
+
+  <header>
+    <div class="logo">L<span class="logo-dot">Δ</span>unch<span class="logo-dot">.</span></div>
+    <div class="phone">
+      <div class="phone-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg>
+      </div>
+      +44 400 023 0742
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>We are coming soon!</h1>
+    <p class="description">Currently we are working on our brand new website and will be lunching soon.</p>
+    <p class="subscribe-text">Do not miss it, subscribe below to keep updated.</p>
+
+    <div class="countdown">
+      <div class="countdown-item">
+        <div class="countdown-value" id="days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-separator">|</div>
+      <div class="countdown-item">
+        <div class="countdown-value" id="hours">00</div>
+        <div class="countdown-label">Hr</div>
+      </div>
+      <div class="countdown-separator">|</div>
+      <div class="countdown-item">
+        <div class="countdown-value" id="minutes">00</div>
+        <div class="countdown-label">Min</div>
+      </div>
+      <div class="countdown-separator">|</div>
+      <div class="countdown-item">
+        <div class="countdown-value" id="seconds">00</div>
+        <div class="countdown-label">Sec</div>
+      </div>
+    </div>
+
+    <form class="subscription-form">
+      <input type="email" class="subscription-input" placeholder="Enter your email address" required>
+      <button type="submit" class="subscription-button">Subscribe</button>
+    </form>
+  </div>
+
+  <script>
+    // Set the launch date (one month from now)
+    const launchDate = new Date();
+    launchDate.setMonth(launchDate.getMonth() + 1);
+    
+    // Update countdown every second
+    const countdown = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      
+      // Calculate days, hours, minutes and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Display the result
+      document.getElementById("days").innerText = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+      
+      // If countdown is over
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+      }
+    }, 1000);
+
+    // Handle form submission
+    document.querySelector('.subscription-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.querySelector('.subscription-input').value;
+      alert(`Thank you! ${email} has been subscribed to our mailing list.`);
+      document.querySelector('.subscription-input').value = '';
+    });
+  </script>
+</body>
+</html>
