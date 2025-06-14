@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #1e40af;
+}
+
+.book-trip-btn {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book-trip-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    min-height: 90vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 4rem;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2e8f0;
+    color: #64748b;
+    font-weight: 600;
+    position: relative;
+}
+
+.timeline-item.active {
+    background: #1e40af;
+    color: white;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background: #e2e8f0;
+}
+
+.hero-subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #1e293b;
+}
+
+.cta-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.hero-right {
+    flex: 1;
+    position: relative;
+}
+
+.airplane-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.airplane-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 250px;
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.info-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    width: 40px;
+    height: 40px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.social-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+}
+
+.social-icon.facebook {
+    background: #1877f2;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.twitter {
+    background: #1da1f2;
+}
+
+.partners {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 0.9rem;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    font-weight: 500;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.partner-logo.airbnb {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.partner-logo.airbnb::before {
+    content: "🏠";
+    margin-right: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.partner-logo.booking {
+    font-weight: 600;
+    color: #003580;
+    opacity: 0.8;
+}
+
+.partner-logo.trivago {
+    font-weight: 500;
+    position: relative;
+}
+
+.partner-logo.trivago::before {
+    content: "○";
+    margin-right: 0.3rem;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+.partner-logo.expedia {
+    font-weight: 500;
+    position: relative;
+}
+
+.partner-logo.expedia::before {
+    content: "✈";
+    margin-right: 0.3rem;
+    color: #ffc72c;
+}
+
+/* Alternative more accurate approach using text styling */
+.partners-accurate {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 0.85rem;
+}
+
+.logo-airbnb {
+    color: #ff5a5f;
+    font-weight: 600;
+    font-family: 'Circular', sans-serif;
+}
+
+.logo-booking {
+    color: #003580;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.logo-trivago {
+    color: #007fad;
+    font-weight: 500;
+    position: relative;
+}
+
+.logo-trivago::after {
+    content: "●";
+    color: #ff6b35;
+    margin-left: 0.2rem;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 0;
+}
+
+.logo-expedia {
+    color: #ffc72c;
+    font-weight: 600;
+    background: linear-gradient(45deg, #ffc72c, #ff6b35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 5rem 0;
+    background: white;
+}
+
+.destinations h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 3rem;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.card-content p {
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    background: #2563eb;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Journey Section */
+.journey {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.journey h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.journey-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.journey-item {
+    text-align: center;
+}
+
+.journey-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.journey-center {
+    text-align: center;
+}
+
+.book-ticket-card {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-btn {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.book-ticket-card h3 {
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.learn-more-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Wanderlust Section */
+.wanderlust {
+    padding: 5rem 0;
+    background: white;
+}
+
+.wanderlust-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.wanderlust-left {
+    position: relative;
+}
+
+.wanderlust-left img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.discount-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.discount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    display: block;
+}
+
+.wanderlust-right h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.book-flight-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s;
+}
+
+.book-flight-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .journey-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .wanderlust-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #94a3b8;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.partner-item i {
+    font-size: 1.2rem;
+    color: #ff5a5f;
+}
+
+.booking-logo {
+    color: #003580;
+    font-weight: 600;
+}
+
+.trivago-logo {
+    color: #007fad;
+    font-weight: 500;
+}
+
+.expedia-logo {
+    color: #ffc72c;
+    font-weight: 600;
+}
